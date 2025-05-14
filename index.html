@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  <title>Price Calculator Refactored with Discount</title>
+</head>
+<body>
+
+<div class="container">
+  <h1>Price Calculator 2.0</h1>
+  <div class="calculator">
+
+    <div class="form-group">
+      <label for="price">Price($):</label>
+      <input type="number"id="price" placeholder="Enter price" step="0.01" min="0">
+    </div>
+
+<div class="form-group">
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" placeholder="Enter quantity" step="0.01" min="0">
+</div>
+
+<div class="form-group">
+  <label for="discount">Discount($):</label>
+  <input type="number"id="discount" placeholder="Enter discount amount" step="0.01" min="0">
+</div>
+
+<div class="form-group">
+  <label for="taxRate">Tax Rate:</label>
+  <div class="tax-input">
+    <input type="number" id="TaxRate" placeholder="Enter tax rate" step="0.01" min="0" max="1">
+    <span class="hint">(i.e., 0.10 for 10%)</span>
+</div>
+  </div>
+
+  <button id="calculateButton" type="button">Calculate Total</button>
+
+  <div class="result-container">
+<p>Total Cost:<span id="result">$0.00</span>/p>
+  </div>
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
