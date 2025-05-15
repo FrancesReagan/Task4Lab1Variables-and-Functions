@@ -19,7 +19,7 @@
 
 <div class="form-group">
   <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" placeholder="Enter quantity" step="0.01" min="0">
+  <input type="number" id="quantity" placeholder="Enter quantity" step="1" min="0">
 </div>
 
 <div class="form-group">
@@ -30,7 +30,7 @@
 <div class="form-group">
   <label for="taxRate">Tax Rate:</label>
   <div class="tax-input">
-    <input type="number" id="TaxRate" placeholder="Enter tax rate" step="0.01" min="0" max="1">
+    <input type="number" id="taxRate" placeholder="Enter tax rate" step="0.01" min="0" max="1">
     <span class="hint">(i.e., 0.10 for 10%)</span>
 </div>
   </div>
@@ -38,7 +38,7 @@
   <button id="calculateButton" type="button">Calculate Total</button>
 
   <div class="result-container">
-<p>Total Cost:<span id="result">$0.00</span>/p>
+<p>Total Cost: <span id="result">$0.00</span></p>
   </div>
 </div>
 </div>

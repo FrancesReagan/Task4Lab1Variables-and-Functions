@@ -5,7 +5,7 @@ function calculateTotalCost(price,quantity, taxRate, discount)
     typeof quantity!=="number"||isNaN(quantity)||
     typeof taxRate!=="number"||isNaN(taxRate)
   ){
-    return "INVALID INPUT.";
+    return "INVALID INPUT";
   }
 
   //check if dicount is provided and valid, if not set to 0//
@@ -19,7 +19,7 @@ const subtotal = price*quantity;
 
 //Apply discount if any//
 let discountedAmount = subtotal;
-if (dicount>0){
+if (discount>0){
   discountedAmount=subtotal-discount;
 }
 
@@ -31,7 +31,7 @@ if(discountedAmount<0){
 //Apply tax to get final total cost//
 const totalCost=discountedAmount*(1 + taxRate);
 
-return totalCost:
+return totalCost;
 }
 
 //Function to handle the button click//
@@ -42,14 +42,14 @@ function handleCalculation(){
   const taxRate = parseFloat(document.getElementById("taxRate").value);
 
   //Get discount value if entered, otherwise use 0//
-  let dicount = 0;
+  let discount = 0;
   const discountInput = document.getElementById("discount").value;
   if(discountInput!==""){
     discount =parseFloat(discountInput);
   }
 
   //Total Cost Calculate//
-  const result = calculateTotalCost(price,quantity,taxRate,dicount);
+  const result = calculateTotalCost(price,quantity,taxRate,discount);
 
   //Display result//
   const resultElement = document.getElementById("result");
