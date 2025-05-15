@@ -1,18 +1,18 @@
-function calculateTotalCost(price,quantity, taxRate, discount)
+function calculateTotalCost(price,quantity, taxRate, discount) {
   //check if price, quantity and taxRate are valid numbers//
   if(
     typeof price!=="number"||isNaN(price)||
     typeof quantity!=="number"||isNaN(quantity)||
     typeof taxRate!=="number"||isNaN(taxRate)
   ){
-    return "INVALID INPUT";
+    return "Invalid input";
   }
 
   //check if dicount is provided and valid, if not set to 0//
   if(discount === undefined){
     discount = 0;
   }else if(typeof discount!=="number" || isNaN(discount)){
-    return "INVALID INPUT";
+    return "Invalid input";
   }
 //Calculate subtotal first//
 const subtotal = price*quantity;
@@ -54,7 +54,7 @@ function handleCalculation(){
   //Display result//
   const resultElement = document.getElementById("result");
 
-  if(result==="Invalid input.") {
+  if(result==="Invalid input") {
     resultElement.textContent = result;
     resultElement.style.color = "purple";//error color Purple
   
